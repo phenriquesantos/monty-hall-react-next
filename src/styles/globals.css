@@ -1,6 +1,8 @@
 :root {
   --background: #444;
   --foreground: #fff;
+  --area-porta-altura: 310px;
+  --area-porta-largura: 200px;
 }
 
 html,
