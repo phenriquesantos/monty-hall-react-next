@@ -1,6 +1,6 @@
 import PortaModel from "@/model/porta";
 
-export function criarPortas(qntde, numeroPremiada: number): PortaModel[]{
+export function criarPortas(qntde: number, numeroPremiada: number): PortaModel[] {
   return Array.from({ length: qntde }, (_, i) => {
     const numero = i + 1;
     const premiada = numero == numeroPremiada;
@@ -8,13 +8,13 @@ export function criarPortas(qntde, numeroPremiada: number): PortaModel[]{
   })
 }
 
-export function atualizarPortas(portas: PortaModel[], portaModificada: PortaModel){
+export function atualizarPortas(portas: PortaModel[], portaModificada: PortaModel) {
   return portas.map(porta => {
     const eAModificada = porta.numero == portaModificada.numero;
-    if(eAModificada)
+    if (eAModificada)
       return portaModificada;
     else
       return portaModificada.aberta ? porta : porta.desselecionar();
-    
+
   });
 }
